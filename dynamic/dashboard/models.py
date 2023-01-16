@@ -20,7 +20,7 @@ class LessionScore(models.Model):
             sum = 0
             counter = 0
             for scorelession in LessionScore.objects.all():
-                if scorelession.Lession.id== lession.id :
+                if scorelession.Lession.id == lession.id :
                     sum += scorelession.Score
                     counter += 1
             if counter !=0:

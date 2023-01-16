@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from . models import Lession,LessionScore
 from . forms import LessionForm
-
+from json import loads,dumps
+from django.http import JsonResponse
 def IndexView(request):
     lessions = Lession.objects.all()
     lessionscore = LessionScore()
@@ -19,3 +20,4 @@ def IndexView(request):
     }
 
     return render(request,'dashboard/index.html',context)
+
